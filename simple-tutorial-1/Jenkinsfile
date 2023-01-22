@@ -5,7 +5,7 @@ pipeline {
         stage('testing pipeline'){
           steps{
 		echo 'Demo - 1'
-		  sh if [ -d "from-jenkins" ]; then touch from-jenkins/demo.txt else mkdir from-jenkins && touch from-jenkins/demo.txt fi
+		  sh 'if [ -d "from-jenkins" ]; then touch from-jenkins/demo.txt else mkdir from-jenkins && touch from-jenkins/demo.txt fi'
                 }
         }
 
